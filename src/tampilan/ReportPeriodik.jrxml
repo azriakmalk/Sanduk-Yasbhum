@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4fd276d3-a52a-4190-a5ab-dac8735c2e87">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="New Dataset 1" uuid="5e6a3a64-1d9d-4721-a540-5da461239a67">
+		<parameter name="awal" class="java.lang.String"/>
+		<parameter name="akhir" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[SELECT
+     santunan1.`NOMOR` AS santunan1_NOMOR,
+     santunan1.`NO_KWITANSI` AS santunan1_NO_KWITANSI,
+     santunan1.`TANGGAL` AS santunan1_TANGGAL,
+     santunan1.`NAMA` AS santunan1_NAMA,
+     santunan1.`PANGKAT` AS santunan1_PANGKAT,
+     santunan1.`KESATUAN` AS santunan1_KESATUAN,
+     santunan1.`NRP` AS santunan1_NRP,
+     santunan1.`WILAYAH` AS santunan1_WILAYAH,
+     santunan1.`STATUS` AS santunan1_STATUS,
+     santunan1.`TGL_MENINGGAL` AS santunan1_TGL_MENINGGAL,
+     santunan1.`YA` AS santunan1_YA,
+     santunan1.`TGLSRT` AS santunan1_TGLSRT,
+     santunan1.`NOSRT` AS santunan1_NOSRT
+FROM
+     `santunan1` santunan1 where tanggal between $P{awal} and $P{akhir}]]>
+		</queryString>
+		<field name="santunan1_NOMOR" class="java.lang.Integer"/>
+		<field name="santunan1_NO_KWITANSI" class="java.lang.Integer"/>
+		<field name="santunan1_TANGGAL" class="java.sql.Date"/>
+		<field name="santunan1_NAMA" class="java.lang.String"/>
+		<field name="santunan1_PANGKAT" class="java.lang.String"/>
+		<field name="santunan1_KESATUAN" class="java.lang.String"/>
+		<field name="santunan1_NRP" class="java.lang.String"/>
+		<field name="santunan1_WILAYAH" class="java.lang.String"/>
+		<field name="santunan1_STATUS" class="java.lang.String"/>
+		<field name="santunan1_TGL_MENINGGAL" class="java.sql.Date"/>
+		<field name="santunan1_YA" class="java.lang.String"/>
+		<field name="santunan1_TGLSRT" class="java.sql.Date"/>
+		<field name="santunan1_NOSRT" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="awal" class="java.lang.String"/>
+	<parameter name="akhir" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     santunan1.`NOMOR` AS santunan1_NOMOR,
+     santunan1.`NO_KWITANSI` AS santunan1_NO_KWITANSI,
+     santunan1.`TANGGAL` AS santunan1_TANGGAL,
+     santunan1.`NAMA` AS santunan1_NAMA,
+     santunan1.`PANGKAT` AS santunan1_PANGKAT,
+     santunan1.`KESATUAN` AS santunan1_KESATUAN,
+     santunan1.`NRP` AS santunan1_NRP,
+     santunan1.`WILAYAH` AS santunan1_WILAYAH,
+     santunan1.`STATUS` AS santunan1_STATUS,
+     santunan1.`TGL_MENINGGAL` AS santunan1_TGL_MENINGGAL,
+     santunan1.`YA` AS santunan1_YA,
+     santunan1.`TGLSRT` AS santunan1_TGLSRT,
+     santunan1.`NOSRT` AS santunan1_NOSRT
+FROM
+     `santunan1` santunan1 where tanggal between $P{awal} and $P{akhir}]]>
+	</queryString>
+	<field name="santunan1_NOMOR" class="java.lang.Integer"/>
+	<field name="santunan1_NO_KWITANSI" class="java.lang.Integer"/>
+	<field name="santunan1_TANGGAL" class="java.sql.Date"/>
+	<field name="santunan1_NAMA" class="java.lang.String"/>
+	<field name="santunan1_PANGKAT" class="java.lang.String"/>
+	<field name="santunan1_KESATUAN" class="java.lang.String"/>
+	<field name="santunan1_NRP" class="java.lang.String"/>
+	<field name="santunan1_WILAYAH" class="java.lang.String"/>
+	<field name="santunan1_STATUS" class="java.lang.String"/>
+	<field name="santunan1_TGL_MENINGGAL" class="java.sql.Date"/>
+	<field name="santunan1_YA" class="java.lang.String"/>
+	<field name="santunan1_TGLSRT" class="java.sql.Date"/>
+	<field name="santunan1_NOSRT" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="46">
+			<staticText>
+				<reportElement uuid="2f45ed9b-44e0-462d-bc7c-7a15e6471007" x="0" y="24" width="800" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[PURNAWIRAWAN, WREDATAMA DAN WARAKURI YANG TELAH MENERIMA SANTUNAN DUKA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3fc8b074-5f27-4099-9f1a-4aa10c7478d8" x="0" y="4" width="800" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DAFTAR NAMA - NAMA ANGGOTA TNI AL MILITER DAN PNS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="38">
+			<staticText>
+				<reportElement uuid="b5c3c51b-a4b0-454d-92a4-96ac41c1d8f5" x="2" y="3" width="57" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TANGGAL TRANSFER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f49a78b2-eeb1-4edd-aa1d-8c1cedfada26" x="65" y="3" width="65" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO KWITANSI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="415bc3b2-1a67-4e19-8422-933d3e959abb" x="138" y="3" width="145" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="917a2530-8742-45ef-a382-18a3c00ed531" x="308" y="3" width="80" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PANGKAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e54847c0-acda-4764-a12f-9b857f150d88" x="402" y="3" width="100" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NRP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ff7d16ad-c551-44a4-b6f3-f8ae13993dea" x="508" y="3" width="85" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KESATUAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d0a57678-52bc-4cdd-a425-f9f63d092209" x="622" y="3" width="64" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TANGGAL MENINGGAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="599cbaef-4ec2-4cb1-8b20-207cae4bb19f" x="700" y="3" width="100" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STATUS]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="d62686cc-aec2-4585-a925-643e9bc1b962" x="0" y="36" width="800" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="38591785-4c57-4236-8ccc-887eaee5b0d4" x="0" y="0" width="1" height="37"/>
+			</line>
+			<line>
+				<reportElement uuid="38591785-4c57-4236-8ccc-887eaee5b0d4" x="62" y="0" width="1" height="37"/>
+			</line>
+			<line>
+				<reportElement uuid="38591785-4c57-4236-8ccc-887eaee5b0d4" x="131" y="0" width="1" height="37"/>
+			</line>
+			<line>
+				<reportElement uuid="38591785-4c57-4236-8ccc-887eaee5b0d4" x="292" y="0" width="1" height="37"/>
+			</line>
+			<line>
+				<reportElement uuid="38591785-4c57-4236-8ccc-887eaee5b0d4" x="398" y="0" width="1" height="37"/>
+			</line>
+			<line>
+				<reportElement uuid="38591785-4c57-4236-8ccc-887eaee5b0d4" x="504" y="0" width="1" height="37"/>
+			</line>
+			<line>
+				<reportElement uuid="38591785-4c57-4236-8ccc-887eaee5b0d4" x="610" y="1" width="1" height="36"/>
+			</line>
+			<line>
+				<reportElement uuid="38591785-4c57-4236-8ccc-887eaee5b0d4" x="697" y="0" width="1" height="37"/>
+			</line>
+			<line>
+				<reportElement uuid="38591785-4c57-4236-8ccc-887eaee5b0d4" x="800" y="1" width="1" height="36"/>
+			</line>
+			<line>
+				<reportElement uuid="d62686cc-aec2-4585-a925-643e9bc1b962" x="1" y="0" width="800" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="f1c9466e-1192-4c7d-8180-b3d2e6774528" x="2" y="0" width="57" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{santunan1_TANGGAL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c9072386-4c85-4eee-921f-4a74fe490d02" x="65" y="0" width="68" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{santunan1_NO_KWITANSI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0f854cda-cc81-4153-a2eb-df1e0db4438b" x="138" y="0" width="145" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{santunan1_NAMA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="defe5f57-17e4-4658-9bf6-7a8547c35f12" x="296" y="1" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{santunan1_PANGKAT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="59870e33-68a7-40cf-bd81-29dfed760c47" x="402" y="0" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{santunan1_NRP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d2835319-13fa-4208-b66f-46d4534693d3" x="508" y="0" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{santunan1_KESATUAN}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="cde6e8b1-d8af-4d0f-9f7d-44218d19717f" x="613" y="0" width="82" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{santunan1_TGL_MENINGGAL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="cff5b7f9-3631-4fbb-9bda-bfadacbb6322" x="700" y="0" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{santunan1_STATUS}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="7780c4ac-30e7-4388-ab0c-1119cc25f532" x="0" y="20" width="801" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="38591785-4c57-4236-8ccc-887eaee5b0d4" x="0" y="-2" width="1" height="22"/>
+			</line>
+			<line>
+				<reportElement uuid="38591785-4c57-4236-8ccc-887eaee5b0d4" x="62" y="-2" width="1" height="22"/>
+			</line>
+			<line>
+				<reportElement uuid="38591785-4c57-4236-8ccc-887eaee5b0d4" x="131" y="-2" width="1" height="22"/>
+			</line>
+			<line>
+				<reportElement uuid="38591785-4c57-4236-8ccc-887eaee5b0d4" x="292" y="-2" width="1" height="22"/>
+			</line>
+			<line>
+				<reportElement uuid="38591785-4c57-4236-8ccc-887eaee5b0d4" x="398" y="-2" width="1" height="22"/>
+			</line>
+			<line>
+				<reportElement uuid="38591785-4c57-4236-8ccc-887eaee5b0d4" x="504" y="-2" width="1" height="22"/>
+			</line>
+			<line>
+				<reportElement uuid="38591785-4c57-4236-8ccc-887eaee5b0d4" x="610" y="-2" width="1" height="22"/>
+			</line>
+			<line>
+				<reportElement uuid="38591785-4c57-4236-8ccc-887eaee5b0d4" x="697" y="-2" width="1" height="22"/>
+			</line>
+			<line>
+				<reportElement uuid="38591785-4c57-4236-8ccc-887eaee5b0d4" x="800" y="-2" width="1" height="22"/>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="22">
+			<textField evaluationTime="Report">
+				<reportElement uuid="86e31741-1ab0-4573-94db-ae75e592ad9c" x="762" y="0" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fa50ab77-fb83-429e-9a1a-5c76a7a61eb6" x="682" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement uuid="f00a9164-644d-4c7d-8546-1e481039336c" x="0" y="0" width="290" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

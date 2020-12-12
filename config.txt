@@ -1,0 +1,6 @@
+#Database Configuration
+driver=com.mysql.jdbc.Driver
+url=jdbc:mysql://localhost/sanduk
+user=root
+pass=
+path=C:/xampp/mysql/bin/

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="77a8128a-cdaf-4b2d-840e-4203489e39e1">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="kesatuan" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     santunan1.`NOMOR` AS santunan1_NOMOR,
+     santunan1.`NO_KWITANSI` AS santunan1_NO_KWITANSI,
+     santunan1.`TANGGAL` AS santunan1_TANGGAL,
+     santunan1.`NAMA` AS santunan1_NAMA,
+     santunan1.`PANGKAT` AS santunan1_PANGKAT,
+     santunan1.`KESATUAN` AS santunan1_KESATUAN,
+     santunan1.`NRP` AS santunan1_NRP,
+     santunan1.`WILAYAH` AS santunan1_WILAYAH,
+     santunan1.`STATUS` AS santunan1_STATUS,
+     santunan1.`TGL_MENINGGAL` AS santunan1_TGL_MENINGGAL,
+     santunan1.`YA` AS santunan1_YA,
+     santunan1.`TGLSRT` AS santunan1_TGLSRT,
+     santunan1.`NOSRT` AS santunan1_NOSRT
+FROM
+     `santunan1` santunan1 where kesatuan = $P{kesatuan}]]>
+	</queryString>
+	<field name="santunan1_NOMOR" class="java.lang.Integer"/>
+	<field name="santunan1_NO_KWITANSI" class="java.lang.Integer"/>
+	<field name="santunan1_TANGGAL" class="java.sql.Date"/>
+	<field name="santunan1_NAMA" class="java.lang.String"/>
+	<field name="santunan1_PANGKAT" class="java.lang.String"/>
+	<field name="santunan1_KESATUAN" class="java.lang.String"/>
+	<field name="santunan1_NRP" class="java.lang.String"/>
+	<field name="santunan1_WILAYAH" class="java.lang.String"/>
+	<field name="santunan1_STATUS" class="java.lang.String"/>
+	<field name="santunan1_TGL_MENINGGAL" class="java.sql.Date"/>
+	<field name="santunan1_YA" class="java.lang.String"/>
+	<field name="santunan1_TGLSRT" class="java.sql.Date"/>
+	<field name="santunan1_NOSRT" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="fc81e620-8fb5-4d95-adc3-7f9798507dc3" style="Title" x="0" y="1" width="553" height="33" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[DAFTAR NAMA - NAMA ANGGOTA TNI AL MILITER DAN PNS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f8cb4620-0f6a-43be-a77d-dd9a878dc3e7" style="SubTitle" x="0" y="35" width="553" height="22" forecolor="#000000"/>
+				<textElement>
+					<font size="10" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[PURNAWIRAWAN, WREDATAMA DAN WARAKURI YANG TELAH MENERIMA SANTUNAN DUKA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6b5fcddd-1056-4f03-90bd-fa3acd165ca3" x="0" y="60" width="64" height="20"/>
+				<textElement/>
+				<text><![CDATA[KESATUAN :]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="65429204-2500-44f1-98c6-dd3d05777960" x="64" y="60" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{kesatuan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement uuid="2c8b19d3-3512-4172-ad63-9c1681862a92" positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="58d8f42c-9915-4353-bec9-5c21002b56ae" style="Column header" x="0" y="2" width="61" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[TANGGAL TRANSFER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a2764cab-6a68-45ff-88de-eea29c3ecbb9" style="Column header" x="61" y="2" width="64" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[NO KWITANSI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f8647212-1972-4e58-ae77-a0f1c39861b1" style="Column header" x="125" y="2" width="57" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3c672d05-6e50-4eae-b017-97ab1e04ba30" style="Column header" x="184" y="2" width="62" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[PANGKAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9fdc9546-aa04-40cf-b969-39083af33113" style="Column header" x="250" y="2" width="49" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[NRP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="904c5068-4b42-4417-ade1-a5c893380b67" style="Column header" x="300" y="2" width="63" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[WILAYAH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c4b88ec3-1a85-4289-8116-cf0ae1480689" style="Column header" x="422" y="2" width="71" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[TGL MENINGGAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4f125e85-36e6-48a0-b9fc-a54716c55929" style="Column header" x="494" y="2" width="61" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[STATUS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f86de74a-1e7f-4b41-b221-2e2fac90da12" style="Column header" x="364" y="2" width="57" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[KESATUAN]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="17" splitType="Stretch">
+			<line>
+				<reportElement uuid="b3d560e7-685c-471f-a561-4d7d8e45f768" positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="f9b5da6c-5a85-4888-bd9b-0ab217bd6fba" style="Detail" x="0" y="0" width="61" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{santunan1_TANGGAL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f65d89fe-d958-43d9-ad3d-5763ae6f78d2" style="Detail" x="61" y="0" width="64" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{santunan1_NO_KWITANSI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="eed0ba0b-bbd7-450d-a229-2255a1c6d75f" style="Detail" x="125" y="0" width="57" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{santunan1_NAMA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d0f61e14-8f26-4fe0-95f8-6f02535420a6" style="Detail" x="184" y="0" width="62" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{santunan1_PANGKAT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="060b6d33-0563-4cbf-be49-3bfb70add2a1" style="Detail" x="250" y="0" width="49" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{santunan1_NRP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6452c49c-d20a-410e-84fb-0c5239d1948f" style="Detail" x="300" y="0" width="63" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{santunan1_WILAYAH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0c58f528-fe54-4bab-aabe-536daeb95a23" style="Detail" x="364" y="0" width="57" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{santunan1_KESATUAN}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="500e71c0-45ae-4e14-838d-6c41bbebbd7a" style="Detail" x="422" y="0" width="71" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{santunan1_TGL_MENINGGAL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="07fb3350-3944-49a7-b326-35327400e1c7" style="Detail" x="494" y="0" width="61" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{santunan1_STATUS}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement uuid="9564ed90-9789-4a67-bc81-78d3bed1ab17" style="Column header" x="433" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="1ed69208-3e2b-42d6-a007-a5771cc2a3ce" style="Column header" x="513" y="0" width="40" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="915db2da-b6ef-48d7-9afa-81bd210b0c93" style="Column header" x="0" y="0" width="197" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
